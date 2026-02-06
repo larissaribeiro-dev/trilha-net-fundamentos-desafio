@@ -1,38 +1,37 @@
-# DIO - Trilha .NET - Fundamentos
-www.dio.me
+# 🚗 Sistema de Gerenciamento de Estacionamento
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+Este projeto foi desenvolvido como parte dos fundamentos da trilha .NET da **DIO**. O objetivo é gerenciar o fluxo de veículos em um estacionamento, controlando entradas, saídas e o cálculo automatizado de valores devidos.
 
-## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+## 🎯 O Desafio
+O sistema permite ao operador interagir com um menu para:
+1. **Cadastrar** um veículo pela placa.
+2. **Remover** um veículo, calculando o valor total (Preço Inicial + Preço por Hora * Tempo Permanecido).
+3. **Listar** todos os veículos ativos no pátio.
 
-## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
-![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
+## 🧠 Conceitos .NET Aplicados
+Neste projeto, apliquei fundamentos essenciais para qualquer desenvolvedor C#:
+* **Manipulação de Coleções:** Uso de `List<string>` para gerenciar os dados em memória.
+* **LINQ (Language Integrated Query):** Utilização do método `.Any()` para verificações rápidas e eficientes na lista.
+* **Lógica de Programação:** Estruturas de repetição (`foreach`) e condicionais aninhadas.
+* **Interação via Console:** Entrada e saída de dados via terminal, garantindo uma interface funcional para o usuário.
 
-A classe contém três variáveis, sendo:
+## 🛠️ Tecnologias Utilizadas
+* **Linguagem:** C#
+* **Ambiente:** .NET 6.0 ou superior
 
-**precoInicial**: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+## 📋 Regra de Cálculo
+| Componente | Descrição |
+|-------|-----------|
+| **Preço Inicial** | Valor fixo cobrado apenas pela entrada do veículo. |
+| **Preço por Hora** | Valor variável de acordo com o tempo de permanência. |
+| **Fórmula** | `Valor Total = Preço Inicial + (Preço por Hora * Horas)` |
 
-**precoPorHora**: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+## 🚀 Como Executar
+1. Clone o repositório.
+2. Navegue até a pasta do projeto e execute `dotnet run`.
+3. Siga as instruções do menu interativo no terminal.
 
-**veiculos**: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+---
+A implementação conta com tratamento de sensibilidade de caixa (*Case Insensitive*) na busca de placas, aumentando a confiabilidade do sistema.
 
-A classe contém três métodos, sendo:
-
-**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
-
-**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
-
-**ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
-
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
-
-
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+[Meu GitHub](https://github.com/larissaribeiro-dev)
